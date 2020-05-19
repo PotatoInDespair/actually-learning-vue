@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <p>This is a component</p>
-    <p>{{msg}} &larr; This is a prop</p>
+    <p>{{msg}} &larr;This is a prop</p>
   </div>
 </template>
 
@@ -9,12 +9,11 @@
 export default {
   name: "HelloWorld",
   props: {
-    msg: String
-  }
+    msg: String,
+  },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
   margin: 40px 0 0;

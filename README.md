@@ -1,4 +1,7 @@
-# vue-beautify
+# actually-learning-vue
+
+Linting setup: ESLint recommended + double quotes, trailing commas, no linebreak style
+Formatting setup: js-beautify, Vetur set to html: js-beautify, js: eslint prettier, sass: default
 
 ## Project setup
 ```

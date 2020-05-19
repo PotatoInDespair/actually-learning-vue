@@ -1,36 +1,47 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <img id="logo" alt="Vue logo" src="@/assets/logo.png">
+    <NavBar />
+    <main>
+      <router-view />
+    </main>
   </div>
 </template>
 
-<style>
+<script>
+import NavBar from "@/components/Nav.vue";
+
+export default {
+  components: { NavBar },
+};
+</script>
+
+<style lang="scss">
+@import "variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #23282e;
+  font-family: Raleway, "Gill Sans", Arial, Helvetica, sans-serif;
+  background-color: $background;
+  color: white;
+  margin: 0;
 }
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #e4e4e4;
+a {
+  text-decoration: none;
+  color: white;
 }
 
-#nav {
-  padding: 30px;
+#logo {
+  display: block;
+  margin: 0 auto;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #e4e4e4;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+main {
+  margin: 0 auto;
+  max-width: 1000px;
 }
 </style>
