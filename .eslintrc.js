@@ -17,7 +17,7 @@ module.exports = {
     quotes: ["error", "double", {
       avoidEscape: true,
     }],
-    "comma-dangle": ["error", "always-multiline"],
-    "semi": "always",
+    "comma-dangle": ["warn", "always-multiline"],
+    "semi": 2,
   },
-}
+};

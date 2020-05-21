@@ -9,7 +9,7 @@
 export default {
   name: "Recipe",
   props: ["recipes", "index"],
-}
+};
 </script>
 
 <style>

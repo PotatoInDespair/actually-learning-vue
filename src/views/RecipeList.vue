@@ -2,7 +2,7 @@
   <div>
     <ul>
       <li v-for="(recipe, index) in recipes" :key="recipe.url" @click="activeIndex=index;">
-        <router-link :to="recipeUrl(recipe.url)">{{recipe.title}}</router-link>
+        <router-link :to="recipe.url | recipeUrl">{{recipe.title}}</router-link>
       </li>
     </ul>
     <router-view :recipes="recipes" :index="activeIndex" />
@@ -12,7 +12,7 @@
 <script>
 export default {
   name: "RecipeList",
-  data: function () {
+  data: function() {
     return {
       activeIndex: 0,
       recipes: [
@@ -23,14 +23,19 @@ export default {
         },
         {
           url: "mapo",
-          title:"Mapo Tofu",
+          title: "Mapo Tofu",
           description: "Classic Chinese Sichuan dish. Spicy and tasty :)",
+        },
+        {
+          url: "pizza",
+          title: "Pizza",
+          description: "Delicious homemade oven-baked 'zza :)",
         },
       ],
     };
   },
-  methods: {
-    recipeUrl: function (url) {
+  filters: {
+    recipeUrl: function(url) {
       return "/recipes/" + url;
     },
   },
